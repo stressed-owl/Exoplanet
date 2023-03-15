@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mercuryFragment">
+
+    <fragment
+        android:id="@+id/mercuryFragment"
+        android:name="com.nikolay.exploreuniverseapp.MercuryFragment"
+        tools:layout="@layout/fragment_mercury" >
+        <action
+            android:id="@+id/action_mercuryFragment_to_earthFragment"
+            app:destination="@id/earthFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_mercuryFragment_to_venusFragment"
+            app:destination="@id/venusFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/earthFragment"
+        android:name="com.nikolay.exploreuniverseapp.EarthFragment"
+        tools:layout="@layout/fragment_earth" >
+        <action
+            android:id="@+id/action_earthFragment_to_mercuryFragment"
+            app:destination="@id/mercuryFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_earthFragment_to_venusFragment"
+            app:destination="@id/venusFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/venusFragment"
+        android:name="com.nikolay.exploreuniverseapp.VenusFragment"
+        tools:layout="@layout/fragment_venus" >
+        <action
+            android:id="@+id/action_venusFragment_to_mercuryFragment"
+            app:destination="@id/mercuryFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_venusFragment_to_earthFragment"
+            app:destination="@id/earthFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_in" />
+    </fragment>
+</navigation>

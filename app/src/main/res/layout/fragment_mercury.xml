@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MercuryFragment">
+
+    <data>
+        <variable
+            name="mercuryViewModel"
+            type="com.nikolay.exploreuniverseapp.viewmodels.MercuryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/compose_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mercury_card"
+            android:layout_width="290dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="230dp"
+            android:backgroundTint="@color/red"
+            android:contentDescription="@string/mercury"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/mercury"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/mercury_desc"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_container"
+            android:orientation="vertical"
+            android:paddingVertical="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mercury_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/mercury_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/mercury_planet"
+                    android:src="@drawable/mercury_button" />
+
+                <ImageButton
+                    android:id="@+id/venus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> mercuryViewModel.navigateToVenus()}"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/venus_planet"
+                    android:src="@drawable/venus_button" />
+
+                <ImageButton
+                    android:id="@+id/earth_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> mercuryViewModel.navigateToEarth()}"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/earth_planet"
+                    android:src="@drawable/earth_button" />
+
+                <ImageButton
+                    android:id="@+id/mars_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/mars_planet"
+                    android:src="@drawable/mars_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/jupiter_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/mercury_planet"
+                    android:src="@drawable/jupiter_button" />
+
+                <ImageButton
+                    android:id="@+id/saturn_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/venus_planet"
+                    android:src="@drawable/saturn_button" />
+
+                <ImageButton
+                    android:id="@+id/uranus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/earth_planet"
+                    android:src="@drawable/uranus_button" />
+
+                <ImageButton
+                    android:id="@+id/neptune_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/mars_planet"
+                    android:src="@drawable/neptune_button" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

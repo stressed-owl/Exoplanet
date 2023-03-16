@@ -79,7 +79,7 @@ fun Planet(modifier: Modifier = Modifier, image: Int) {
     Image(
         painter = painterResource(image),
         contentDescription = null,
-        modifier = modifier.padding(10.dp)
+        modifier = modifier.padding(15.dp)
     )
 }
 
@@ -90,9 +90,10 @@ fun PlanetCard(modifier: Modifier = Modifier) {
             bottomEnd = 30.dp,
             bottomStart = 30.dp
         ),
+        elevation = 10.dp,
         modifier = modifier
             .fillMaxWidth()
-            .height(270.dp),
+            .height(280.dp),
         backgroundColor = Color(0xFF282C47)
     ) {
         Planet(modifier, R.drawable.mercury)
